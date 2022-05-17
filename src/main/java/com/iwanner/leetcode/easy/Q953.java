@@ -1,4 +1,4 @@
-package leetcode.easy;
+package com.iwanner.leetcode.easy;
 
 /**
  * 某种外星语也使用英文小写字母，但可能顺序 order 不同。字母表的顺序（order）是一些小写字母的排列。
@@ -15,6 +15,7 @@ public class Q953 {
         if (words.length <= 1) return true;
         boolean isAlienSorted = true;
         for (int i = 0; i < words.length - 1; i++) {
+            // 有一个位置相邻两个单词不满足条件就认为不满足字典序
             if (!isTrue(words[i], words[i + 1], order)) {
                 isAlienSorted = false;
                 break;
